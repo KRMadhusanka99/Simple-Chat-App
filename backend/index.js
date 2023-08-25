@@ -13,7 +13,9 @@ const io = new Server(server,{
         origin: "http://localhost:3000",
         methods: ["GET", "POST"],
     }
-})
+});
+
+io.on("connection",)
 
 server.listen(3001, ()=>{
     console.log('Server is runing');
