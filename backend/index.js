@@ -15,7 +15,13 @@ const io = new Server(server,{
     }
 });
 
-io.on("connection",)
+io.on("connection", (socket) => {
+    console.log(socket.id);
+
+    socket.on("disconnect", ()=>{
+        console.log("User Disconnected", socket.id);
+    });
+});
 
 server.listen(3001, ()=>{
     console.log('Server is runing');
